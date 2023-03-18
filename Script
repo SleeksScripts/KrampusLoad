@@ -1,0 +1,118 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local KrampusLoad = Instance.new("ScreenGui")
+local Logo = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local Box = Instance.new("Frame")
+local Bar = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
+local Youtube = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Discord = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+
+--Properties:
+
+KrampusLoad.Name = "KrampusLoad"
+KrampusLoad.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+KrampusLoad.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Logo.Name = "Logo"
+Logo.Parent = KrampusLoad
+Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Logo.Position = UDim2.new(0.465706438, 0, 0.051070828, 0)
+Logo.Rotation = 360.000
+Logo.Size = UDim2.new(0.063786, 0, 0.151565075, 0)
+Logo.Image = "rbxassetid://12827815316"
+
+UICorner.CornerRadius = UDim.new(2, 12)
+UICorner.Parent = Logo
+
+Box.Name = "Box"
+Box.Parent = Logo
+Box.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Box.Position = UDim2.new(-1.2700001, 0, 1.18000007, 0)
+Box.Size = UDim2.new(3.53000021, 0, 0.280000001, 0)
+
+Bar.Name = "Bar"
+Bar.Parent = Box
+Bar.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Bar.Size = UDim2.new(0, 0, 1, 0)
+
+UICorner_2.Parent = Bar
+
+UICorner_3.Parent = Box
+
+Youtube.Name = "Youtube"
+Youtube.Parent = Logo
+Youtube.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+Youtube.Position = UDim2.new(1.46000028, 0, 0.470000148, 0)
+Youtube.Size = UDim2.new(0.800000072, 0, 0.50999999, 0)
+Youtube.Font = Enum.Font.FredokaOne
+Youtube.Text = "Discord"
+Youtube.TextColor3 = Color3.fromRGB(255, 255, 255)
+Youtube.TextScaled = true
+Youtube.TextSize = 14.000
+Youtube.TextWrapped = true
+
+UICorner_4.Parent = Youtube
+
+Discord.Name = "Discord"
+Discord.Parent = Logo
+Discord.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+Discord.Position = UDim2.new(-1.26999998, 0, 0.480000138, 0)
+Discord.Size = UDim2.new(0.800000072, 0, 0.50999999, 0)
+Discord.Font = Enum.Font.FredokaOne
+Discord.Text = "Youtube"
+Discord.TextColor3 = Color3.fromRGB(255, 255, 255)
+Discord.TextScaled = true
+Discord.TextSize = 14.000
+Discord.TextWrapped = true
+
+UICorner_5.Parent = Discord
+
+-- Scripts:
+
+local function ACFJBD_fake_script() -- Bar.LocalScript 
+	local script = Instance.new('LocalScript', Bar)
+
+	local Bar = script.Parent
+	local Logo = script.Parent.Parent.Parent.Parent.Logo
+	
+	Bar:TweenSize(UDim2.new(1, 0,1, 0), Enum.EasingDirection.In, Enum.EasingStyle.Linear, 3, true)
+	
+	wait(4)
+	
+	
+	Logo:TweenPosition(UDim2.new(0.466, 0,1.3, 0), Enum.EasingDirection.In, Enum.EasingStyle.Back, 1, true)
+	
+	wait(3)
+	
+	local Starter = game:GetService("StarterGui")
+	local ScreenGuiKrampus = Starter.KrampusLoad
+	
+	ScreenGuiKrampus:Destroy()
+	
+	
+	
+	
+end
+coroutine.wrap(ACFJBD_fake_script)()
+local function LNTOQKL_fake_script() -- Youtube.LocalScript 
+	local script = Instance.new('LocalScript', Youtube)
+
+	setclipboard("https://www.youtube.com/@vinxscripts9727/about")
+	
+end
+coroutine.wrap(LNTOQKL_fake_script)()
+local function GFCUK_fake_script() -- Discord.LocalScript 
+	local script = Instance.new('LocalScript', Discord)
+
+	setclipboard("https://discord.gg/ZjnMetfUDN")
+	
+end
+coroutine.wrap(GFCUK_fake_script)()
